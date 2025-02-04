@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Métodos de Pago - Licor Store</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .payment-method {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px;
+            border-bottom: 1px solid #ddd;
+        }
+        .payment-method:last-child {
+            border-bottom: none;
+        }
+        .payment-method img {
+            height: 40px;
+        }
+        .payment-method label {
+            flex-grow: 1;
+            margin-left: 10px;
+        }
+        .button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+            display: block;
+            margin: 20px auto;
+            width: 100%;
+        }
+        .button:hover {
+            background-color: #0056b3;
+        }
+        @media (max-width: 600px) {
+            .payment-method {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .payment-method img {
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Métodos de Pago</h1>
+        <div class="payment-method">
+            <img src="https://www.bnb.com.bo/PortalBNB/Images/TarjetaCredito/Imagenes/Tarjeta_siognature-02%201.png" alt="Tarjeta de Crédito">
+            <label for="credit-card">Tarjeta de Credito</label>
+            <input type="radio" id="credit-card" name="payment" value="credit-card">
+        </div>
+        <div class="payment-method">
+            <img src="https://img.utdstc.com/icon/d49/c48/d49c4851fcbdecccece71a27cddf0a6bddb23173461e763ec32cd08eeb778c69:200" alt="PayPal">
+            <label for="paypal">PayPal</label>
+            <input type="radio" id="paypal" name="payment" value="paypal">
+        </div>
+        <div class="payment-method">
+            <img src="https://thumbs.dreamstime.com/b/icono-de-transferencia-bancaria-dinero-dise%C3%B1o-color-azul-el-negocios-bancarios-est%C3%A1-aislado-en-fondo-blanco-uso-para-gr%C3%A1fico-y-223421884.jpg" alt="Transferencia Bancaria">
+            <label for="bank-transfer">Transferencia Bancaria</label>
+            <input type="radio" id="bank-transfer" name="payment" value="bank-transfer">
+        </div>
+        <button class="button">Confirmar Pago</button>
+    </div>
+</body>
+</html>
